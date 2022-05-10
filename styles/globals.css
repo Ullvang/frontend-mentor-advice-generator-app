@@ -59,6 +59,7 @@ p {
   line-height: 32.78px;
   letter-spacing: -0.26px;
   margin: 24px 0px;
+  margin-bottom: clamp(24px, 6.4vw,40px);
 }
 
 footer > p {
@@ -72,6 +73,7 @@ footer > p {
   letter-spacing: -0.26px;
   margin: 24px 0px; */
 }
+
 
 a {
   color: inherit;
@@ -92,5 +94,8 @@ a {
     font-size: 28px;
     line-height: 38.25px;
     letter-spacing: -0.3px;
+  }
+  picture {
+    margin-bottom: 8px;
   }
 }
