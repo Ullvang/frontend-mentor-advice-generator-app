@@ -17,8 +17,9 @@ const Home: NextPage = ({
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
-        <h1>ADVICE #{advice.id}</h1>
-        <p>{advice.advice}</p>
+        {/* <h1>ADVICE #{advice.id}</h1> */}
+        <h1>ADVICE #{117}</h1>
+        <p>&ldquo;{advice.advice}&rdquo;</p>
         <picture
           style={{
             position: "relative",
@@ -72,7 +73,7 @@ const Home: NextPage = ({
 export default Home;
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const data = await fetch("https://api.adviceslip.com/advice/117");
+  const data = await fetch("https://api.adviceslip.com/advice/71");
   const advice = await data.json();
   return {
     props: {
