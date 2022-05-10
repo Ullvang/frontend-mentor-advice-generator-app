@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import DividerMobile from "../public/pattern-divider-mobile.svg";
+import DividerMobileDesktop from "../public/pattern-divider-desktop.svg";
 import DiceIcon from "../public/icon-dice.svg";
 
 const Home: NextPage = ({
@@ -18,7 +19,7 @@ const Home: NextPage = ({
       <main>
         <h1>ADVICE #{advice.id}</h1>
         <p>{advice.advice}</p>
-        <div
+        <picture
           style={{
             position: "relative",
             height: "16px",
@@ -26,8 +27,21 @@ const Home: NextPage = ({
             maxWidth: "444px",
           }}
         >
-          <Image src={DividerMobile} alt="divider" layout="fill" />
-        </div>
+          {/* <picture> */}
+          <source
+            media="(min-width:650px)"
+            srcSet="pattern-divider-desktop.svg"
+          />
+          <img
+            src="pattern-divider-mobile.svg"
+            style={{
+              height: "16px",
+              width: "100%",
+            }}
+            alt="wow"
+          />
+          {/* </picture> */}
+        </picture>
         <div id={styles.iconCircle}>
           <Image src={DiceIcon} alt="dice icon" />
         </div>
